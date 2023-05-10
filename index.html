@@ -48,47 +48,90 @@ All features in level 2
 iphone application to keep track of one’s returns
       </p>
       
-      <h1>Week 2: Research </h1>
-      What I did this week:
-Researched other similar chrome extensions to learn how their features work and how that can be applied/tweaked for my project
-Honey & Capital one shopping
-Chrome extensions that are also related to online shopping. 
-Have features that I would like to imitate like:
-Recognizes when user is on an online shopping site
-Pops up when a user is on the check out page of a site
-Has login/user capabilities
-Stores some type of database on discount information and connects that with user input/info from shopping sites. 
-Takeaways
-
-
-
-Challenges:
-Unsure how most of the features I want to imitate from Honey & Capital one are implemented as they do not publicly document this. Features such as:
-recognizes when user is on a check out page
-Database connected with chrome extension
-
-Goals for next week:
-Learn how to make basic chrome extension
-Set up basic chrome extension
+ <h1> 1/23 - 1/29 Week 1: Planning </h1>
+ Research and explored potential project ideas. Developed outline of project. 
       
-      <h1>Week 3: Chrome Extension Set up </h1>
-      What I did this week:
-Learned the basics of building web extension (manifest.json, loading unpacked extension, console logs/errors, error logs, etc) 
-Followed some tutorials on how to build out chrome extension:
-Google chrome developers - getting started
-Google Chrome Extensions - Development Basics
-Chrome Developer chrome extension example/tutorial
-Chrome Developer chrome extension example 2
-Set up basic chrome extension
+<h1>1/30 - 2/5 Week 2: Research </h1>
+What I did this week:
+Researched other similar chrome extensions to learn how their features work and how that can be applied/tweaked for my project<br>
+Honey & Capital one shopping (Chrome extensions that are also related to online shopping)<br> 
+Have features that I would like to imitate like: <br>
+Recognizes when user is on an online shopping site<br>
+Pops up when a user is on the check out page of a site<br>
+Has login/user capabilities<br>
+Stores some type of database on discount information and connects that with user input/info from shopping sites.<br>
 
-Challenges:
-Chrome extension ugly
-Not proficient in front end/javascript
+Challenges:<br>
+Unsure how most of the features I want to imitate from Honey & Capital One Shopping are implemented as they do not publicly document this. Features such as:
+recognizes when user is on a check out page. <br>
 
-Goals for next week:
-Familiarize self with javascript and chrome extension: Get extension to recognize which site it’s on and later on check to see if site user is on is in our database
-Make database of sites and return policies
-Research how to do this and best way to do this for a chrome extension
+Goals for next week:<br>
+  <ul>
+  <li>Learn how to make basic chrome extension</li>
+  <li>Set up basic chrome extension</li>
+</ul>
+      
+<h1>2/6 - 2/12 Week 3: Chrome Extension Set up </h1>
+What I did this week:<br>
+<ul>
+<li> Learned the basics of building web extension (manifest.json, loading unpacked extension, console logs/errors, error logs, etc) </li>
+<li> Read Google Developer Guides on getting started with chrome extensions: <br> 
+  https://developer.chrome.com/docs/extensions/<br>
+  https://developer.chrome.com/docs/extensions/mv3/getstarted/ <br>
+  https://developer.chrome.com/docs/extensions/mv3/getstarted/extensions-101/ <br>
+  https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/ <br>
+  </li>
+ <li> Followed tutorials from Google Developer Guide on how to build out chrome extension: <br>
+   Reading Time Extension Example : https://developer.chrome.com/docs/extensions/mv3/getstarted/tut-reading-time/ <br>
+   Tabs Manager Extension Example: https://developer.chrome.com/docs/extensions/mv3/getstarted/tut-tabs-manager/<br>
+  </li>
+<li>Watched Youtube Tutorials on how to build Chrome Extension:<br>
+  Build a Chrome Extension: Tutorial for Beginners https://www.youtube.com/watch?v=0n809nd4Zu4&ab_channel=freeCodeCamp.org <br>
+  Create a Google Chrome Extension (For Beginners) https://www.youtube.com/watch?v=uV4L-wcnK3Y&t=559s&ab_channel=iEatWebsites <br> </li>
+ </ul>
+      
+ <h1> 2/12 - 2/19 Week 4:  Set Up Basic Chrome Extension </h1>
+ Coded basic chrome extension in Visual Studio Code using the research I had done in the previous week. Got a basic Chrome Exension up and running that can be
+be accessed through my Chrome Browser. Load Unpacked onto my Chrome. Able to be clicked on and viewed. <br>
+      
+  Challenges: 
+      <ul>
+        <li> Extension has no styling so it is not very visually appealing </li>
+      </ul> <br>
+  Goals for Next Week: <br>
+      
+      <ul>
+        <li> Familiarize self with javascript and chrome extension: Get extension to recognize which site it’s on and later on check to see if site user is on is in our database
+        </li>
+        <li>
+          Make database of sites and return policies: Research how to do this and best way to do this for a chrome extension
+        </li>
+      </ul>
+      
+
+      <h1> 2/12 - 2/19 Week 5: Recognizing Online Store User is Visiting & Database Research</h1> 
+      Research how to get Chrome Extension to know what shop user is viewing. Figured out best way to do this is to first get the URL the user is currently viewing and then parse through that URL to figure out exact store. <br>
+      Utilized Stack Overflow to figure out how to get URL from Chrome Extension. https://stackoverflow.com/questions/1979583/how-can-i-get-the-url-of-the-current-tab-from-a-google-chrome-extension <br>
+      Used Javascript string manipulation to parse through URL to be left with only the store name.<br>
+      
+      Database Research <br>
+      Started researching potential ways to store store return policies and user information. A few potential options are through JSON data, CSV file, or the simplest way would be a Javascript Dictionary. <br>
+      
+      Challenges:
+      <ul>
+        <li>What to do if store URL and store name are different?</li>
+        <li>Unsure which database option is most suitable for this project</li>
+        <li>Never implemented/connected database to frontend before and am unsure how this would work out and potentially how long this woudl take</li>
+      </ul>
+      
+      Next Week: Populate database with store and return policies. Figure out how to recognize when user is on a checkout page. <br>
+      
+      
+    <h1> 2/27 - 3/5 Week 6: Getting rid of user info & checkout page recognition & Populating Database</h1>
+
+    
+
+
 Get extension to link to specific store return policy
 Match store name and see if it exists in our database
 How to get json data in javascript: https://www.w3schools.com/js/js_json_parse.asp#:~:text=Use%20the%20JavaScript%20function%20JSON,will%20get%20a%20syntax%20error.
@@ -96,7 +139,7 @@ https://sebhastian.com/display-javascript-variable-html/
 https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
 https://developer.chrome.com/docs/extensions/mv2/xhr/
 
-      <h1> Week 4:  Smarter Chrome Extension & Pivoting</h1>
+     
       Recognizing site & recognizing “order placed” page:
 Get extension to get url of the site it is on
 Stumbled upon Returnqueen:
@@ -133,7 +176,7 @@ Continue database implementation from this week
 Research more into linking gmail 
 
       
-      <h1>Week 5: Gmail, OAuth, and Google Chrome API</h1>
+      <h1>2/20 - 2/26 Week 5: Gmail, OAuth, and Google Chrome API</h1>
       Research on getting access to gmail information → this can be done via the gmail API:
 Gmail API step by step implementation
 https://developers.google.com/gmail/api/quickstart/js
@@ -153,7 +196,7 @@ Learn about authentication and authorization: https://developers.google.com/work
 No code gmail api scraper: https://stevesie.com/apps/gmail-api#:~:text=Scraping%20Gmail%20Data,email%20content%20from%20their%20API.
 
       
-      <h1>Week 6: Continuing last weeks work</h1>
+      <h1> 2/27 - 3/5 Week 6: Continuing last weeks work</h1>
 Started implementing Gmail API to chrome extension
 Added necessary code to manifest.json, index.html, javascript files, etc. 
 Uploaded extension to developer dashboard
@@ -161,6 +204,10 @@ Created OAuth Client ID
 Registered OAuth in manifest
 Initiate first OAuth Flow
 Challenges: Stuck on initiating first OAuth Flow → bug somewhere. Keep getting error message 
+      
+      <h1> 3/6 - 3/12 Week 7</h1>
+      
+      <h1> 3/13 - 3/19 Week 8: Spring Breal </h1> 
 
 
 
