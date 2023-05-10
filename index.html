@@ -96,6 +96,72 @@ https://sebhastian.com/display-javascript-variable-html/
 https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
 https://developer.chrome.com/docs/extensions/mv2/xhr/
 
+      <h1> Week 4:  Smarter Chrome Extension & Pivoting</h1>
+      Recognizing site & recognizing “order placed” page:
+Get extension to get url of the site it is on
+Stumbled upon Returnqueen:
+Sign into email and get all of your orders from email (guessing through order confirmation)?
+Also shows accurate/semi-accurate date to return according to specific store return policies
+Also has an amazon integration feature
+How hard is it to get access to gmail data? – get confirmation. How hard is this compared to getting to after checkout page 
+
+
+Database with chrome extension:
+Research on database used with chrome extension:
+Locally or on server?
+Specifically → how to store persistent data with chrome extension
+Chrome.storage API?
+Currently attempting to use JSON to store data → more compatible for storing temporary data?
+
+Make database of sites and return policies and connect to extension
+First step – get extension to display return policy for specific store 
+Get extension to link to specific store return policy
+Match store name and see if it exists in our database
+How to get json data in javascript: https://www.w3schools.com/js/js_json_parse.asp#:~:text=Use%20the%20JavaScript%20function%20JSON,will%20get%20a%20syntax%20error.
+https://sebhastian.com/display-javascript-variable-html/
+https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
+https://developer.chrome.com/docs/extensions/mv2/xhr/
+
+
+Challenges:
+Unsure how to make a database to connect to chrome extension to store information 
+Currently using: json?
+Might want to get shopping order info via gmail rather than order placed page to get more info and be more accurate
+
+Next steps:
+Continue database implementation from this week
+Research more into linking gmail 
+
+      
+      <h1>Week 5: Gmail, OAuth, and Google Chrome API</h1>
+      Research on getting access to gmail information → this can be done via the gmail API:
+Gmail API step by step implementation
+https://developers.google.com/gmail/api/quickstart/js
+Manage API site: https://console.cloud.google.com/apis/api/gmail.googleapis.com/metrics?project=returnreminder-383414
+Chrome web store developer dashboard: https://chrome.google.com/webstore/devconsole/3d633572-3f60-4e18-9843-7270b81f9ea0/settings
+
+
+How to access user’s gmail: https://developers.google.com/gmail/api/guides
+Example of chrome extension using OAuth and google chrome API: https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
+Develop on google workspace: https://developers.google.com/workspace/guides/get-started
+Create Google Cloud project: https://developers.google.com/workspace/guides/create-project
+Javascript quickstart (Quickstarts explain how to set up and run an app that calls a Google Workspace API.) https://developers.google.com/gmail/api/quickstart/js
+Gmail API Overview: https://developers.google.com/gmail/api/guides
+Configure OAuth Consent Screen: https://developers.google.com/workspace/guides/configure-oauth-consent
+Setting up OAuth 2.0: https://support.google.com/cloud/answer/6158849#zippy=%2Cweb-applications%2Cnative-applications
+Learn about authentication and authorization: https://developers.google.com/workspace/guides/auth-overview
+No code gmail api scraper: https://stevesie.com/apps/gmail-api#:~:text=Scraping%20Gmail%20Data,email%20content%20from%20their%20API.
+
+      
+      <h1>Week 6: Continuing last weeks work</h1>
+Started implementing Gmail API to chrome extension
+Added necessary code to manifest.json, index.html, javascript files, etc. 
+Uploaded extension to developer dashboard
+Created OAuth Client ID
+Registered OAuth in manifest
+Initiate first OAuth Flow
+Challenges: Stuck on initiating first OAuth Flow → bug somewhere. Keep getting error message 
+
 
 
       
