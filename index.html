@@ -9,45 +9,6 @@
       <h1>Hi, I'm Sabrina! Welcome to My Website</h1>  
       <h2> I will be documenting my project progress here </h2>
       
-      <h1> Project Plan </h1>
-      <p>
-        LEVEL 1:
-Chrome extension that 
-Has sign in/sign out and account features
-Has user database
-Interactive interface 
-Able to trigger when user is on a check out page
-Chrome extension application is able to recognize when user has navigated to checkout pages of website(honey & capital one shopping do this)
-Chrome extension application is able to recognize and pop up when a user is on a shopping site (honey & capital one shopping do this)
-Logs when a person has made a purchase
-Application is able to register on a separate database when a person has made a purchase
-Where to house this separate database?
-How to have this register?
-Connects to a returns database
-The database will be basic where I will manually fill in return dates/policies of companies
-Find a place to house the database that is compatible with chrome extension
-Have the chrome extension backend be connected to database
-      </p>
-      
-      <br>
-      
-      
-<p>
-LEVEL 2:
-All features in level 1
-Sends automated email to user when prompted
-Has capability of sending an email to user when 
-Scrapes web to generate extensive returns database
-Make a web scraper to compile a database of return policy and dates
-      </p>
-
-      <br>
-<p>
-LEVEL 3: 
-All features in level 2
-iphone application to keep track of one’s returns
-      </p>
-      
  <h1> 1/23 - 1/29 Week 1: Planning </h1>
  Research and explored potential project ideas. Developed outline of project. 
       
@@ -115,103 +76,131 @@ be accessed through my Chrome Browser. Load Unpacked onto my Chrome. Able to be 
       Used Javascript string manipulation to parse through URL to be left with only the store name.<br>
       
       Database Research <br>
-      Started researching potential ways to store store return policies and user information. A few potential options are through JSON data, CSV file, or the simplest way would be a Javascript Dictionary. <br>
+      Started researching potential ways to store store return policies and user information.
+Research on database used with chrome extension: 
+      <ul>
+        <li>Locally or on server?</li>
+         <li>Specifically → how to store persistent data with chrome extension</li>
+        <li>Chrome.storage API?</li>
+      </ul>
+
+Currently attempting to use JSON to store data → more compatible for storing temporary data?
       
+      Current Plan:
+<ul>
+  <li> Make database of sites and return policies and connect to extension</li>
+  <li> First step – get extension to display return policy for specific store </li>
+  <li>Get extension to link to specific store return policy </li>
+  <li> Match store name and see if it exists in our database</li>
+
+</ul>
+<br>
+      Research on JSON database & How to get json data in javascript: <br>
+      <ul>
+        <li>https://www.w3schools.com/js/js_json_parse.asp#:~:text=Use%20the%20JavaScript%20function%20JSON,will%20get%20a%20syntax%20error.
+</li>
+        <li>https://sebhastian.com/display-javascript-variable-html/ </li>
+        <li>https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code </li>
+        <li>https://developer.chrome.com/docs/extensions/mv2/xhr/ </li>
+      </ul>
+
+
       Challenges:
       <ul>
         <li>What to do if store URL and store name are different?</li>
         <li>Unsure which database option is most suitable for this project</li>
         <li>Never implemented/connected database to frontend before and am unsure how this would work out and potentially how long this woudl take</li>
+        <li> json storage seems promising but having some trouble with implementation </li>
       </ul>
       
       Next Week: Populate database with store and return policies. Figure out how to recognize when user is on a checkout page. <br>
       
       
-    <h1> 2/27 - 3/5 Week 6: Getting rid of user info & checkout page recognition & Populating Database</h1>
+    <h1> 2/27 - 3/5 Week 6: Prioritization Reorganization and Populating Database </h1> <br>
+      Decided to not prioritize user log-in features and checkout page information as they are not essential in pulling together a MVP solution for the problem I'm tackling. These would be great to look into in the future<br>
+      Prioritizing implementing the database and then connecting that with the front end is a priority is that is an essential part of the extension. The database should store the store name and it's corresponding return policy. At the most basic leve, the extension should show the store's return policy and after that is implemented I will try to calculate and show the return deadline to users. <br>
+      Implementing Database: <br>
+      <ul>
+        <li> (Done) Decided on using a Javascript Dictionary for simplicity instead of JSON</li>
+        <li> (Done) The key of the dictionary contains the store name and the value contains the return policy  </li>
+        <li> Chrome extension should display store return policy based on which store user is on  </li>
+      </ul>
+      
+      
+      Challenges:
+      <ul>
+        <li>How to display different return policy based on store user is on</li>
 
-    
-
-
-Get extension to link to specific store return policy
-Match store name and see if it exists in our database
-How to get json data in javascript: https://www.w3schools.com/js/js_json_parse.asp#:~:text=Use%20the%20JavaScript%20function%20JSON,will%20get%20a%20syntax%20error.
-https://sebhastian.com/display-javascript-variable-html/
-https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
-https://developer.chrome.com/docs/extensions/mv2/xhr/
-
-     
-      Recognizing site & recognizing “order placed” page:
-Get extension to get url of the site it is on
-Stumbled upon Returnqueen:
-Sign into email and get all of your orders from email (guessing through order confirmation)?
-Also shows accurate/semi-accurate date to return according to specific store return policies
-Also has an amazon integration feature
-How hard is it to get access to gmail data? – get confirmation. How hard is this compared to getting to after checkout page 
-
-
-Database with chrome extension:
-Research on database used with chrome extension:
-Locally or on server?
-Specifically → how to store persistent data with chrome extension
-Chrome.storage API?
-Currently attempting to use JSON to store data → more compatible for storing temporary data?
-
-Make database of sites and return policies and connect to extension
-First step – get extension to display return policy for specific store 
-Get extension to link to specific store return policy
-Match store name and see if it exists in our database
-How to get json data in javascript: https://www.w3schools.com/js/js_json_parse.asp#:~:text=Use%20the%20JavaScript%20function%20JSON,will%20get%20a%20syntax%20error.
-https://sebhastian.com/display-javascript-variable-html/
-https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
-https://developer.chrome.com/docs/extensions/mv2/xhr/
+      </ul>
+      
+        Next Week:
+      <ul> 
+        <li>Research how to get extension to show return policy specific to store.  </li>
+      </ul>
+ 
 
 
-Challenges:
-Unsure how to make a database to connect to chrome extension to store information 
-Currently using: json?
-Might want to get shopping order info via gmail rather than order placed page to get more info and be more accurate
+   <h1> 2/27 - 3/5 Week 7: Pivoting:  Gmail, OAuth, and Google Chrome API </h1> <br>
+      While researching this week, I stumbled upon an app I hadn't seen before: Returnqueen <br>
+      This app is for helping customers bring their returns back to the store from their house, but has a feature that seems to connect to users' emails and get their shopping information from there. This could be really good route to take to get more accurate order and shipping information from users. 
+      Questions: 
+      <ul>
+        <li> How does Returnqueen sign into email and get all of your orders from email (guessing through order confirmation)?</li>
+        <li> How does it show accurate/semi-accurate date to return according to specific store return policies? </li>
+        <li> How hard is it to get access to gmail data? – get confirmation. How hard is this compared to getting to after checkout page 
+</li>
+      </ul>
+      
+      Research on getting access to gmail information → this can be done via the gmail API:
+      <ul>
+        <li>Gmail API step by step implementation: https://developers.google.com/gmail/api/quickstart/js</li>
+        <li> Manage API site: https://console.cloud.google.com/apis/api/gmail.googleapis.com/metrics?project=returnreminder-383414
+</li>
+        <li> Chrome web store developer dashboard: https://chrome.google.com/webstore/devconsole/3d633572-3f60-4e18-9843-7270b81f9ea0/settings
+</li>
+        <li> How to access user’s gmail: https://developers.google.com/gmail/api/guides
+</li>
+        <li> Example of chrome extension using OAuth and google chrome API: https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
+</li>
+        <li> Develop on google workspace: https://developers.google.com/workspace/guides/get-started
+</li>
+        <li>Create Google Cloud project: https://developers.google.com/workspace/guides/create-project
+ </li>
+        <li>Javascript quickstart (Quickstarts explain how to set up and run an app that calls a Google Workspace API.) https://developers.google.com/gmail/api/quickstart/js
+ </li>
+        <li>Gmail API Overview: https://developers.google.com/gmail/api/guides
+ </li>
+        <li>Configure OAuth Consent Screen: https://developers.google.com/workspace/guides/configure-oauth-consent
+ </li>
+        <li> Setting up OAuth 2.0: https://support.google.com/cloud/answer/6158849#zippy=%2Cweb-applications%2Cnative-applications
+</li>
+        <li> Learn about authentication and authorization: https://developers.google.com/workspace/guides/auth-overview
+</li>
+        <li> No code gmail api scraper: https://stevesie.com/apps/gmail-api#:~:text=Scraping%20Gmail%20Data,email%20content%20from%20their%20API.
+</li>
+        
+        
+      </ul>
+
 
 Next steps:
-Continue database implementation from this week
-Research more into linking gmail 
+Research more into linking gmail. Try some tutorials on Google APIs to see how difficult this would be 
 
+
+  <h1> 3/13 - 3/19 Week 8: Spring Break</h1> 
       
-      <h1>2/20 - 2/26 Week 5: Gmail, OAuth, and Google Chrome API</h1>
-      Research on getting access to gmail information → this can be done via the gmail API:
-Gmail API step by step implementation
-https://developers.google.com/gmail/api/quickstart/js
-Manage API site: https://console.cloud.google.com/apis/api/gmail.googleapis.com/metrics?project=returnreminder-383414
-Chrome web store developer dashboard: https://chrome.google.com/webstore/devconsole/3d633572-3f60-4e18-9843-7270b81f9ea0/settings
-
-
-How to access user’s gmail: https://developers.google.com/gmail/api/guides
-Example of chrome extension using OAuth and google chrome API: https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
-Develop on google workspace: https://developers.google.com/workspace/guides/get-started
-Create Google Cloud project: https://developers.google.com/workspace/guides/create-project
-Javascript quickstart (Quickstarts explain how to set up and run an app that calls a Google Workspace API.) https://developers.google.com/gmail/api/quickstart/js
-Gmail API Overview: https://developers.google.com/gmail/api/guides
-Configure OAuth Consent Screen: https://developers.google.com/workspace/guides/configure-oauth-consent
-Setting up OAuth 2.0: https://support.google.com/cloud/answer/6158849#zippy=%2Cweb-applications%2Cnative-applications
-Learn about authentication and authorization: https://developers.google.com/workspace/guides/auth-overview
-No code gmail api scraper: https://stevesie.com/apps/gmail-api#:~:text=Scraping%20Gmail%20Data,email%20content%20from%20their%20API.
-
-      
-      <h1> 2/27 - 3/5 Week 6: Continuing last weeks work</h1>
-Started implementing Gmail API to chrome extension
-Added necessary code to manifest.json, index.html, javascript files, etc. 
-Uploaded extension to developer dashboard
-Created OAuth Client ID
-Registered OAuth in manifest
-Initiate first OAuth Flow
+  <h1> 3/20 - 3/27 Week 9: More Google API </h1> 
+<ul>
+<li> Started implementing Gmail API to chrome extension<li>
+<li>Added necessary code to manifest.json, index.html, javascript files, etc. <li>
+<li>Uploaded extension to developer dashboard<li>
+<li>Created OAuth Client ID<li>
+<li>Registered OAuth in manifest<li>
+<li>Initiate first OAuth Flow<li>
+</ul>
 Challenges: Stuck on initiating first OAuth Flow → bug somewhere. Keep getting error message 
       
-      <h1> 3/6 - 3/12 Week 7</h1>
-      
-      <h1> 3/13 - 3/19 Week 8: Spring Breal </h1> 
 
-
-
-      
     </main>
   </body>
 </html>
